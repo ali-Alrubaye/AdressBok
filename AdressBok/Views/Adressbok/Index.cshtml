@@ -1,0 +1,20 @@
+﻿@model IEnumerable<AdressBokRepositories.Models.AdressBok>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Ajax.ActionLink("Create", "Create", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divCreate",
+    InsertionMode = InsertionMode.Replace
+})
+</p>
+<div id="divCreate"></div>
+<div id="showList">
+    @Html.Partial("List")
+</div>
